@@ -1,0 +1,23 @@
+{
+  "dataset_label": "TCGA-UCEC tumor RPPA",
+  "seeds": [
+    42,
+    100,
+    2024,
+    777,
+    999
+  ],
+  "n_seeds": 5,
+  "input_sha256": "e16caa2f4eeaf29e310f9d3732f4e24a9cc5441c798d4f4b9b595334e5219bd3",
+  "plot_values_sha256": "f523fbb73b0c6960343235c890da5d38754261a4a6bb0170600394ac13f1fa13",
+  "renderer": "legacy/Evaluation/paper_seed_rmse_boxplots.py",
+  "renderer_sha256": "5df75d6090c9bcc5c106dd97207f3be0694d69f859fd64cc1ed9a0507b39c210",
+  "adapter_sha256": "c03e005df80108635fa04cb3efccb0ada8d1036b422609a093196e5792bb15ae",
+  "uncertainty": "spread across simulation seeds, not a confidence interval",
+  "outputs": {
+    "pdf": "figures/figure2_TCGA_UCEC/Figure2_TCGA_UCEC_RMSE.pdf",
+    "png": "figures/figure2_TCGA_UCEC/Figure2_TCGA_UCEC_RMSE.png",
+    "values_csv": "figures/figure2_TCGA_UCEC/paper_seed_rmse_values.csv",
+    "summary_csv": "figures/figure2_TCGA_UCEC/paper_seed_rmse_summary.csv"
+  }
+}

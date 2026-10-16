@@ -40,9 +40,11 @@ Rerunning the first cell reuses the current checkout; it does not overwrite
 local changes or silently pull new code into an active experiment. Start a
 fresh Colab session to clone a later repository version. See [COLAB.md](COLAB.md).
 
-The analytical notebook was executed locally. The new bootstrap was tested by
-cloning the live public repository in a fresh directory and then rerunning it.
-A fresh full Colab run remains the next validation step; see
+The user's completed Colab demo is preserved with its outputs in
+[`benchmark_TCGA_Colab_run.ipynb`](notebooks/benchmark_TCGA_Colab_run.ipynb).
+It completed 18 tuning trials, 81 reconstruction fits, and 81 association
+comparisons at seed 42, with no saved cell errors. The current tutorial also
+generates Figure 2 style plots with the paper's five seeds; see
 [docs/VALIDATION.md](docs/VALIDATION.md).
 
 ## Local run
@@ -70,10 +72,13 @@ manager, for example `sudo apt-get install r-base r-base-dev`.
 | Trials per method | 2 | 6-20, as specified in the paper |
 | Neural epoch limit | 30 | 300 |
 | Final conditions | MCAR/MAR/MNAR, 10%/30%/50% | Same |
-| Final simulation seeds | 42 | 42, 100, 2024, 777, 999 |
+| Final simulation seeds | 42, 100, 2024, 777, 999 | Same |
 | Association seed | 42 | 42 |
 
 Demo results are execution examples, not a publication-strength method ranking.
+The notebook's `FINAL_SEEDS=(42,)` option restores the earlier quick single-seed
+check. The Python API's `Settings()` still defaults to one seed; the notebook
+sets its five-seed budget explicitly.
 The paper-budget mode has not been executed as part of this delivery. Model
 architecture, simulation details, and public cohort limitations are documented
 in [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md).
@@ -96,6 +101,20 @@ estimator silently replaces a missing method. The archived source's `SoftImpute`
 is not standard singular-value-shrinkage SoftImpute.
 
 ## Outputs
+
+Section **8a** calls `legacy/Evaluation/paper_seed_rmse_boxplots.py`, the actual
+Figure 2 renderer, using the same colours and method order. It exports labelled
+TCGA-UCEC PDF/PNG figures, individual seed values, mean/SD summaries, a caption,
+and plot provenance. Axis limits adapt to the public data. One-seed previews
+are explicitly labelled and do not estimate between-seed variability.
+
+To plot an existing run without refitting:
+
+```bash
+python scripts/plot_paper_rmse.py --run results/YOUR_RUN_DIRECTORY
+```
+
+See [docs/FIGURE2.md](docs/FIGURE2.md) for the full plotting protocol.
 
 Every run records source/phenotype hashes, settings, dependency versions,
 validation trials and conditions, SQLite Optuna studies, frozen parameters,

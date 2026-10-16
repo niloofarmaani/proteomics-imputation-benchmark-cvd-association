@@ -12,10 +12,14 @@ claim numerical reproduction of the MyoVasc paper.
 
 The supplied `imputation-benchmark-bmc-submission (1).zip` was the source for
 99 Python/R files retained in `legacy/`. Their original SHA-256 hashes are
-recorded in `original_source_sha256.json`. The only on-disk source edit is
-`legacy/config_paths.py`: its hardcoded scratch path was replaced by the
+recorded in `original_source_sha256.json`. Two retained source files have
+documented edits. In `legacy/config_paths.py`, the hardcoded scratch path was replaced by the
 `IMPUTATION_DATA_ROOT` environment variable, defaulting to a local `work/`
-directory. Empty package initializers were added where needed.
+directory. `legacy/Evaluation/paper_seed_rmse_boxplots.py` accepts optional
+figure title/note labels so public TCGA figures identify their dataset and seed
+count. These optional labels leave the original default plotting behaviour
+and summary calculations unchanged. Empty package initializers were added
+where needed.
 
 Two R adapters apply narrowly scoped patches to temporary copies at runtime:
 
@@ -24,9 +28,16 @@ Two R adapters apply narrowly scoped patches to temporary copies at runtime:
 - MissForest: restore original antibody identifiers after `as.data.frame()`
   sanitizes them. The estimator remains `missRanger`.
 
-These avoid silent column mismatches. The original source files remain
+These avoid silent column mismatches. The original R source files remain
 unchanged for comparison. Archived preprocessing, evaluation, and optimization
 scripts remain available but the public notebook calls the new runner.
+
+The public notebook calls the original Figure 2 plotting module through
+`reproducibility.paper_figures`, mapping `mechanism` to its `missingness` input
+column. It does not reconstruct boxes from aggregate means or tuning trials.
+The notebook defaults to the paper's five final seeds, while keeping the small
+demo's tuning/training budget. See `FIGURE2.md` for figure semantics and the
+single-seed preview limitation.
 
 The original benchmark notebooks are not included: their saved outputs and
 associated archive files contain private-cohort data/results. The new notebook

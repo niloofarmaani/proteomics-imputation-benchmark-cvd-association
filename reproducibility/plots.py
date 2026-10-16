@@ -3,8 +3,9 @@ from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
 from .methods import METHODS
+from Evaluation.paper_seed_rmse_boxplots import METHOD_COLORS
 
-COLORS = dict(zip(METHODS, ["#176B9B", "#A37F15", "#C46B2A", "#527332", "#A9527E", "#4093B4", "#C49A35", "#785E88", "#586574"]))
+COLORS = {method: METHOD_COLORS[method] for method in METHODS}
 
 
 def style():

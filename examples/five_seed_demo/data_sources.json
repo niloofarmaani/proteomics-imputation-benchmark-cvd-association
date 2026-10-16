@@ -1,0 +1,23 @@
+{
+  "ucec_rppa.tsv": {
+    "url": "https://media.githubusercontent.com/media/cBioPortal/datahub/bcdc06a6e64b511658de7c857960275fb9df804d/public/ucec_tcga/data_rppa.txt",
+    "sha256": "afae9384aacf8b5cef53211dd00b754180e219e38e7e9e08650189be80cf6c96",
+    "git_commit": "bcdc06a6e64b511658de7c857960275fb9df804d"
+  },
+  "ucec_patient.tsv": {
+    "url": "https://api.gdc.cancer.gov/data/23529ac8-43ca-408a-86ec-cd555f58edbd",
+    "sha256": "c9d50467095d80393429b3f98f5e114358ec0d033be2a296e17ef727207274dc"
+  },
+  "ucec_followup_v1.7.tsv": {
+    "url": "https://api.gdc.cancer.gov/data/60e7c43b-0fcb-44ea-9790-cba420d15ee7",
+    "sha256": "0ca351d7179a3f36458a5c09656edb54cffc70a07a1437d796ad1c640421f9a0"
+  },
+  "ucec_followup_v2.0.tsv": {
+    "url": "https://api.gdc.cancer.gov/data/7710c65b-db8c-454c-81e2-e735515cc5bd",
+    "sha256": "b5d37b58f790083e07ed0ac9df410347ebf74bff8e679872ab1ba9edb97f4921"
+  },
+  "ucec_followup_v4.0.tsv": {
+    "url": "https://api.gdc.cancer.gov/data/6b35d61b-065a-4ee3-b0a5-5b55c6ae3658",
+    "sha256": "2fb8e2b0d47f39fcbe663b8e21ddca7a94e7d17590ac07c25b7d2ce54d858a03"
+  }
+}

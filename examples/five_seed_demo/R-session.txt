@@ -1,0 +1,49 @@
+R version 4.3.3 (2024-02-29)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 24.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0
+LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C
+
+time zone: Europe/Amsterdam
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base
+
+loaded via a namespace (and not attached):
+[1] compiler_4.3.3
+             Package        Version
+FNN          "FNN"          "1.1.4.1"
+missRanger   "missRanger"   "2.6.1"
+BiocGenerics "BiocGenerics" "0.48.1"
+impute       "impute"       "1.76.0"
+littler      "littler"      "0.3.19"
+Metrics      "Metrics"      "0.1.4"
+pkgKitten    "pkgKitten"    "0.2.3"
+ranger       "ranger"       "0.16.0"
+Rcpp         "Rcpp"         "1.0.12"
+RcppEigen    "RcppEigen"    "0.3.4.0.0"
+base         "base"         "4.3.3"
+compiler     "compiler"     "4.3.3"
+datasets     "datasets"     "4.3.3"
+graphics     "graphics"     "4.3.3"
+grDevices    "grDevices"    "4.3.3"
+grid         "grid"         "4.3.3"
+lattice      "lattice"      "0.22-5"
+Matrix       "Matrix"       "1.6-5"
+methods      "methods"      "4.3.3"
+parallel     "parallel"     "4.3.3"
+splines      "splines"      "4.3.3"
+stats        "stats"        "4.3.3"
+stats4       "stats4"       "4.3.3"
+tcltk        "tcltk"        "4.3.3"
+tools        "tools"        "4.3.3"
+utils        "utils"        "4.3.3"

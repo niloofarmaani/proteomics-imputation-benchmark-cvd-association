@@ -1287,6 +1287,8 @@ def _plot_mechanism_panels(
     box_fill_alpha=0.90,
     save_png=False,
     show=True,
+    figure_title=None,
+    figure_note=None,
 ):
     """
     Draw one panel per missingness mechanism.
@@ -1400,6 +1402,12 @@ def _plot_mechanism_panels(
             h_pad=0.04,
             hspace=0.04,
         )
+
+        # Optional public-companion labels; original paper defaults are unchanged.
+        if figure_title:
+            fig.suptitle(figure_title, fontsize=10, fontweight="bold")
+        if figure_note:
+            fig.supxlabel(figure_note, fontsize=7.5)
 
         legend_columns = min(3, n_methods)
 
@@ -1712,6 +1720,8 @@ def make_paper_seed_rmse_boxplots(
     show_method_separators=True,
     repeat_method_labels=False,
     box_fill_alpha=0.90,
+    figure_title=None,
+    figure_note=None,
 ):
     """
     Generate final repeated-seed RMSE figures and optional tables.
@@ -1908,6 +1918,8 @@ def make_paper_seed_rmse_boxplots(
         "box_fill_alpha": box_fill_alpha,
         "save_png": save_png,
         "show": show,
+        "figure_title": figure_title,
+        "figure_note": figure_note,
     }
 
     # Combined figure containing all requested mechanisms.
