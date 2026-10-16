@@ -26,23 +26,24 @@ as cardiovascular labels.
 
 ## Open in Colab
 
-1. Click **Open in Colab** above and sign in to GitHub if Colab requests access
-   to this private repository.
-2. Download the [source ZIP](https://github.com/niloofarmaani/proteomics-imputation-benchmark-cvd-association/archive/refs/heads/main.zip)
-   in your browser while signed in to GitHub. Do not extract it for Colab.
-3. Run the notebook's first code cell and upload that source ZIP when prompted.
-4. Run the dependency setup cell. If it reports that already loaded packages
+1. Click **Open in Colab** above.
+2. Run the first code cell. It clones the public repository into
+   `/content/imputation-reproducibility` and prints the source commit.
+3. Run the dependency setup cell. If it reports that already loaded packages
    changed, restart the Colab session once, then rerun from the beginning.
-5. Continue through the demo cells in order. The notebook downloads verified
+4. Continue through the demo cells in order. The notebook downloads verified
    public data, tunes all nine methods, compares reconstruction and associations,
    and exports its results.
 
-No Google Drive mount or saved R-library ZIP is required. Notebook access and
-source-code availability in a Colab runtime are separate: the source ZIP is
-needed even when you opened the notebook from GitHub. See [COLAB.md](COLAB.md).
+No ZIP download/upload, Google Drive mount, or saved R-library archive is required.
+Rerunning the first cell reuses the current checkout; it does not overwrite
+local changes or silently pull new code into an active experiment. Start a
+fresh Colab session to clone a later repository version. See [COLAB.md](COLAB.md).
 
-The notebook has been executed locally. A fresh Colab run remains the next
-validation step; see [docs/VALIDATION.md](docs/VALIDATION.md).
+The analytical notebook was executed locally. The new bootstrap was tested by
+cloning the live public repository in a fresh directory and then rerunning it.
+A fresh full Colab run remains the next validation step; see
+[docs/VALIDATION.md](docs/VALIDATION.md).
 
 ## Local run
 

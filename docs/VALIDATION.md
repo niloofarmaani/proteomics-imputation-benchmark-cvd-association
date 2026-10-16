@@ -70,5 +70,15 @@ Summary-table presentation and figure labels were refreshed without refitting.
    independently verified on Colab. Actual tested versions are recorded above.
 
 The clean notebook, source, and tests were prepared for the initial GitHub upload.
-The private repository is `niloofarmaani/proteomics-imputation-benchmark-cvd-association`.
+The source repository is `niloofarmaani/proteomics-imputation-benchmark-cvd-association`.
 A fresh Google Colab run and a public release remain pending.
+
+
+## Git-clone setup update
+
+The clean notebook now clones the public source repository directly. Its bootstrap
+was tested in a fresh local directory against the live GitHub repository, then
+rerun to verify that the same checkout and commit are reused and local files
+are preserved. This targeted setup test does not establish a full Colab run.
+The archived executed notebook retains the original setup used for that earlier
+analytical validation; use `benchmark_TCGA_reproducible.ipynb` for current setup.

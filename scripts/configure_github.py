@@ -12,5 +12,5 @@ if not re.fullmatch(r'[A-Za-z0-9_.-]+', args.ref):
     parser.error('Use a branch, tag, or commit without slashes')
 url = f'https://colab.research.google.com/github/{args.repository}/blob/{args.ref}/notebooks/benchmark_TCGA_reproducible.ipynb'
 root = Path(__file__).resolve().parents[1]
-(root/'COLAB.md').write_text(f'[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]({url})\n\nRun the first cell and upload the source ZIP when prompted, or clone this repository into `/content/imputation-reproducibility` before opening the notebook.\n')
+(root/'COLAB.md').write_text(f'[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]({url})\n\nRun the first cell to clone the public repository into `/content/imputation-reproducibility`. No ZIP upload is required.\n')
 print('Created COLAB.md')
