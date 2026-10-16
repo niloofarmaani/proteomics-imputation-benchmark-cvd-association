@@ -1,0 +1,63 @@
+{
+  "settings": {
+    "mode": "demo",
+    "methods": [
+      "KNN",
+      "Iterative",
+      "MissForest",
+      "SoftImpute",
+      "AE",
+      "DAE",
+      "VAE",
+      "GAIN",
+      "Transformer"
+    ],
+    "fractions": [
+      0.1,
+      0.3,
+      0.5
+    ],
+    "mechanisms": [
+      "MCAR",
+      "MAR",
+      "MNAR"
+    ],
+    "tuning_fractions": [
+      0.1,
+      0.3
+    ],
+    "tuning_mechanisms": [
+      "MAR",
+      "MNAR"
+    ],
+    "final_seeds": [
+      42
+    ],
+    "tuning_seed": 42,
+    "association_seed": 42,
+    "trials": 2,
+    "epochs": 30,
+    "patience": 8,
+    "warmup_epochs": 10
+  },
+  "input_sha256": "9e6826486d8a830a84faf96e189c67f06c28a004bd47bf625aac499b1274a348",
+  "phenotype_sha256": "d84033b3e01670f8088993f4634c4e4fd57521b50c42fce6c9f461d8c1430eca",
+  "outcome": "hypertension",
+  "covariates": [
+    "age",
+    "diabetes",
+    "bmi"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "created_utc": "2026-10-16T08:17:00.289595+00:00",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "torch": "2.14.1+cpu",
+    "optuna": "5.0.0",
+    "statsmodels": "0.15.0"
+  }
+}

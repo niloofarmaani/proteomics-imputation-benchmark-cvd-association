@@ -1,0 +1,5 @@
+-r requirements-colab.txt
+torch>=2.6,<3
+nbconvert==7.17.2
+# Optional legacy preprocessing needs jenga==0.0.1a1 and setuptools<81.
+# The public notebook uses a documented deterministic rank-block implementation.

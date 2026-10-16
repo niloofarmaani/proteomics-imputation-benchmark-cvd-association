@@ -1,0 +1,49 @@
+{
+  "study": "TCGA-UCEC / cBioPortal ucec_tcga Firehose Legacy",
+  "assay": "tumor reverse-phase protein array (RPPA); antibody/phosphosite features",
+  "endpoint": "GDC recorded hypertension across baseline and follow-up: consistent yes=1/no=0; discordant or unrecorded=missing",
+  "primary_tumor_samples": 440,
+  "duplicate_patient_samples_removed": 0,
+  "all_missing_or_constant_features_removed": [],
+  "native_incomplete_features_removed": [
+    "ADAR|ADAR1",
+    "ARID1A|ARID1A",
+    "AXL|Axl",
+    "BRCA2|BRCA2",
+    "BRD4|BRD4",
+    "CDK1|CDK1_pY15",
+    "COPS5|JAB1",
+    "CTNNA1|alpha-Catenin",
+    "GATA6|GATA6",
+    "MYH9|Myosin-IIa",
+    "NKX2-1|TTF1",
+    "PARP1|PARP1",
+    "SLC1A5|SLC1A5"
+  ],
+  "discordant_patient_records_excluded_per_phenotype": {
+    "hypertension_diagnosis": 5,
+    "diabetes_diagnosis_indicator": 2
+  },
+  "selected_proteins": 60,
+  "patients_before_complete_case_selection": 440,
+  "protein_complete_cases": 440,
+  "missing_hypertension": 60,
+  "eligible_complete_cases": 380,
+  "raw_hypertension_values": {
+    "[not available]": 400,
+    "yes": 24,
+    "no": 13,
+    "[unknown]": 3
+  },
+  "native_missing_fraction_selected_panel": 0.0,
+  "analysis_samples": 160,
+  "hypertension_counts": {
+    "1": 97,
+    "0": 63
+  },
+  "covariate_missing_counts": {
+    "age": 1,
+    "diabetes": 10,
+    "bmi": 8
+  }
+}
