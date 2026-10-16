@@ -47,6 +47,17 @@ comparisons at seed 42, with no saved cell errors. The current tutorial also
 generates Figure 2 style plots with the paper's five seeds; see
 [docs/VALIDATION.md](docs/VALIDATION.md).
 
+## Impute your own data
+
+For your own CSV/TSV, use the separate
+[**Impute your own data** Colab notebook](https://colab.research.google.com/github/niloofarmaani/proteomics-imputation-benchmark-cvd-association/blob/main/notebooks/impute_your_own_data.ipynb).
+It calls the existing nine-method tuning, frozen reconstruction, and plotting
+workflow unchanged, omits clinical associations, and downloads the original
+table completed by the validation-selected method. It uses complete rows or a
+separate complete reference table for the existing benchmark. See
+[docs/OWN_DATA.md](docs/OWN_DATA.md) for input structure and this reference
+requirement. User uploads/results are not committed to GitHub by the notebook.
+
 ## Local run
 
 Use Python 3.12, R, and a C/C++ toolchain for R dependencies:

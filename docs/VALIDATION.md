@@ -2,6 +2,51 @@
 
 Validated on 16 October 2026 in the supplied Linux workspace.
 
+## Own-data companion validation
+
+The separate `notebooks/impute_your_own_data.ipynb` calls the existing tuning,
+evaluation, method adapters, and original paper renderer without editing them.
+Its only additional stages prepare uploaded data/reference values, select a
+method by frozen validation RMSE, and refit/export the original input. No
+clinical association stage is called.
+
+The notebook's explicit synthetic example was executed through the same local
+in-process IPython route. Saved results are in
+`notebooks/impute_your_own_data_executed.ipynb`; summary outputs and a synthetic
+completed CSV are in `examples/own_data_demo/`.
+
+- Input: 256 samples, 60 numeric variables, 1,054 native missing cells.
+- Reference: 160 fully observed samples across the same 60 variables.
+- All nine original implementations; 18 complete tuning trials, 72 validation
+  condition scores, and 81 frozen final reconstruction fits.
+- Iterative was selected using frozen validation RMSE before final scoring.
+- Its final refit used all 256 input samples and filled all 1,054 missing
+  measurements. The output retained all 61 columns including sample IDs.
+- Observed measurement strings, leading-zero IDs, row order and column order
+  were independently compared with the original input.
+- Thirteen code cells completed without errors. The additional display-only
+  filled-cell preview was executed against the same saved CSV and appended to
+  the saved notebook without changing any numeric stages.
+- Fourteen checks passed, including input/header checks, missing-reference
+  handling, reference-column alignment, validation-only method selection,
+  original-data refitting, preservation of observed values/metadata, and
+  rejection of invalid completed matrices.
+- The exported PNG and notebook figure were visually inspected; their labels
+  identify the uploaded-data reference and the single-seed limitation.
+- Existing files under `legacy/`, the core `reproducibility` workflow modules,
+  and the installer/execution scripts were unchanged by this companion.
+
+The first small synthetic example reached 18 trials and 80 reconstruction fits
+but stopped on the original Transformer's `Training batch contains no observed
+cells` check (97 reference rows, 12 variables, MNAR at 50%). This failure was
+retained rather than patched. The final example uses the previously validated
+160-by-60 reference size. Original method failures on other input configurations
+remain visible and are not replaced with fallback algorithms.
+
+Fresh Colab upload/download UI execution and the full-budget own-data run
+remain unverified. Inputs without enough complete rows require a separate
+complete reference table to retain the original benchmark protocol.
+
 ## User-saved Colab run reviewed
 
 The notebook saved on GitHub in commit

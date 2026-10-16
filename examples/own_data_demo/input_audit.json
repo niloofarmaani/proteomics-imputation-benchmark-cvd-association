@@ -1,0 +1,8 @@
+{
+  "reference_source": "complete rows of the uploaded dataset, across every selected variable",
+  "reference_samples": 160,
+  "input_samples": 256,
+  "variables": 60,
+  "native_missing_cells": 1054,
+  "native_missing_fraction": 0.06861979166666667
+}
